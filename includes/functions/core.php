@@ -1,5 +1,5 @@
 <?php
-namespace 10upLogin\Core;
+namespace TenUpLogin\Core;
 
 /**
  * Default setup routine
@@ -32,7 +32,7 @@ function setup() {
 function i18n() {
 	$locale = apply_filters( 'plugin_locale', get_locale(), '10up-login' );
 	load_textdomain( '10up-login', WP_LANG_DIR . '/10up-login/10up-login-' . $locale . '.mo' );
-	load_plugin_textdomain( '10up-login', false, plugin_basename( 10UP_LOGIN_PATH ) . '/languages/' );
+	load_plugin_textdomain( '10up-login', false, plugin_basename( TENUP_LOGIN_PATH ) . '/languages/' );
 }
 
 /**
@@ -77,13 +77,13 @@ function deactivate() {
 function script_url( $script, $context ) {
 
 	if( !in_array( $context, ['admin', 'frontend', 'shared'], true) ) {
-		error_log('Invalid $context specfied in 10upLogin script loader.');
+		error_log('Invalid $context specfied in TenUpLogin script loader.');
 		return '';
 	}
 
 	return ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ?
-		10UP_LOGIN_URL . "assets/js/${context}/{$script}.js" :
-		10UP_LOGIN_URL . "dist/js/${context}.min.js" ;
+		TENUP_LOGIN_URL . "assets/js/${context}/{$script}.js" :
+		TENUP_LOGIN_URL . "dist/js/${context}.min.js" ;
 
 }
 
@@ -98,13 +98,13 @@ function script_url( $script, $context ) {
 function style_url( $stylesheet, $context ) {
 
 	if( !in_array( $context, ['admin', 'frontend', 'shared'], true) ) {
-		error_log('Invalid $context specfied in 10upLogin stylesheet loader.');
+		error_log('Invalid $context specfied in TenUpLogin stylesheet loader.');
 		return '';
 	}
 
 	return ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ?
-		10UP_LOGIN_URL . "assets/css/${context}/{$stylesheet}.css" :
-		10UP_LOGIN_URL . "dist/css/${stylesheet}.min.css" ;
+		TENUP_LOGIN_URL . "assets/css/${context}/{$stylesheet}.css" :
+		TENUP_LOGIN_URL . "dist/css/${stylesheet}.min.css" ;
 
 }
 
@@ -119,7 +119,7 @@ function scripts() {
 		'10up_login_shared',
 		script_url( 'shared', 'shared' ),
 		[],
-		10UP_LOGIN_VERSION,
+		TENUP_LOGIN_VERSION,
 		true
 	);
 
@@ -127,7 +127,7 @@ function scripts() {
 		'10up_login_frontend',
 		script_url( 'frontend', 'frontend' ),
 		[],
-		10UP_LOGIN_VERSION,
+		TENUP_LOGIN_VERSION,
 		true
 	);
 
@@ -144,7 +144,7 @@ function admin_scripts() {
 		'10up_login_shared',
 		script_url( 'shared', 'shared' ),
 		[],
-		10UP_LOGIN_VERSION,
+		TENUP_LOGIN_VERSION,
 		true
 	);
 
@@ -152,7 +152,7 @@ function admin_scripts() {
 		'10up_login_admin',
 		script_url( 'admin', 'admin' ),
 		[],
-		10UP_LOGIN_VERSION,
+		TENUP_LOGIN_VERSION,
 		true
 	);
 
@@ -169,7 +169,7 @@ function styles() {
 		'10up_login_shared',
 		style_url( 'shared-style', 'shared' ),
 		[],
-		10UP_LOGIN_VERSION
+		TENUP_LOGIN_VERSION
 	);
 
 	if( is_admin() ) {
@@ -177,7 +177,7 @@ function styles() {
 			'10up_login_admin',
 			style_url( 'admin-style', 'admin' ),
 			[],
-			10UP_LOGIN_VERSION,
+			TENUP_LOGIN_VERSION,
 			true
 		);
 	}
@@ -186,7 +186,7 @@ function styles() {
 			'10up_login_frontend',
 			style_url( 'style', 'frontend' ),
 			[],
-			10UP_LOGIN_VERSION,
+			TENUP_LOGIN_VERSION,
 			true
 		);
 	}
@@ -204,14 +204,14 @@ function admin_styles() {
 		'10up_login_shared',
 		style_url( 'shared-style', 'shared' ),
 		[],
-		10UP_LOGIN_VERSION
+		TENUP_LOGIN_VERSION
 	);
 
 	wp_enqueue_script(
 		'10up_login_admin',
 		style_url( 'admin-style', 'admin' ),
 		[],
-		10UP_LOGIN_VERSION,
+		TENUP_LOGIN_VERSION,
 		true
 	);
 
@@ -228,7 +228,7 @@ function mce_css( $stylesheets ) {
 		$stylesheets .= ',';
 	}
 
-	return $stylesheets . 10UP_LOGIN_URL . ( ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ?
+	return $stylesheets . TENUP_LOGIN_URL . ( ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ?
 			'assets/css/frontend/editor-style.css' :
 			'dist/css/editor-style.min.css' );
 }

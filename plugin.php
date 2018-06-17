@@ -1,28 +1,29 @@
 <?php
 /**
- * Plugin Name: 10upLogin
- * Plugin URI:
- * Description:
+ * Plugin Name: TenUpLogin
+ * Plugin URI:  https://github.com/mollyfoz/10up-login
+ * Description: 10up Custom Login Plugin
  * Version:     0.1.0
- * Author:      10up
- * Author URI:  https://10up.com
+ * Author:      Molly Magnifico
+ * Author URI:  https://github.com/mollyfoz/
  * Text Domain: 10up-login
  * Domain Path: /languages
  */
 
 // Useful global constants
-define( '10UP_LOGIN_VERSION', '0.1.0' );
-define( '10UP_LOGIN_URL',     plugin_dir_url( __FILE__ ) );
-define( '10UP_LOGIN_PATH',    dirname( __FILE__ ) . '/' );
-define( '10UP_LOGIN_INC',     10UP_LOGIN_PATH . 'includes/' );
+define( 'TENUP_LOGIN_VERSION', '0.1.0' );
+define( 'TENUP_LOGIN_URL',     plugin_dir_url( __FILE__ ) );
+define( 'TENUP_LOGIN_PATH',    dirname( __FILE__ ) . '/' );
+define( 'TENUP_LOGIN_INC',     TENUP_LOGIN_PATH . 'includes/' );
 
 // Include files
-require_once 10UP_LOGIN_INC . 'functions/core.php';
+require_once TENUP_LOGIN_INC . 'functions/core.php';
+require_once TENUP_LOGIN_INC . 'functions/molly-custom.php';
 
 
 // Activation/Deactivation
-register_activation_hook( __FILE__, '\10upLogin\Core\activate' );
-register_deactivation_hook( __FILE__, '\10upLogin\Core\deactivate' );
+register_activation_hook( __FILE__, '\TenUpLogin\Core\activate' );
+register_deactivation_hook( __FILE__, '\TenUpLogin\Core\deactivate' );
 
 // Bootstrap
-10upLogin\Core\setup();
+TenUpLogin\Core\setup();
