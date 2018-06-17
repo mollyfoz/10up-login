@@ -16,7 +16,7 @@ define( 'TENUP_LOGIN_URL',     plugin_dir_url( __FILE__ ) );
 define( 'TENUP_LOGIN_PATH',    dirname( __FILE__ ) . '/' );
 define( 'TENUP_LOGIN_INC',     TENUP_LOGIN_PATH . 'includes/' );
 
-// Include files
+// Include files, add custom login plugin php partial
 require_once TENUP_LOGIN_INC . 'functions/core.php';
 require_once TENUP_LOGIN_INC . 'functions/molly-custom.php';
 

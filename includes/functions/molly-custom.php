@@ -1,5 +1,6 @@
 <?php
 
+//override default wordpress styles for login page and enqueue new stylesheet
 function override_styles() {
 	wp_dequeue_style( 'login' );
 	wp_enqueue_style(
