@@ -1,7 +1,7 @@
 <?php
-namespace TenUpLogin\MollyCustom;
 
-function login_styles() {
+function override_styles() {
+	wp_dequeue_style( 'login' );
 	wp_enqueue_style(
 		'10up_custom_login',
 		TENUP_LOGIN_URL . 'dist/css/style.min.css',
@@ -10,10 +10,8 @@ function login_styles() {
 	);
 }
 
-add_action('login_enqueue_scripts', __NAMESPACE__ . '\login_styles');
+add_action( 'login_enqueue_scripts', __NAMESPACE__ . '\override_styles', 20 );
 
 function custom_login_markup() {
-	
-}
 
-add_action()
+}
