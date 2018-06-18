@@ -3,8 +3,10 @@
 }
 
 #custom_user_login,
-#custom_user_pass {
+#custom_user_pass,
+span {
   border: none;
+  color: #4A4949;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -15,6 +17,9 @@
 
 fieldset {
   border: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .forgetmenot {
@@ -29,6 +34,7 @@ fieldset {
   width: 25%;
 
   & label {
+    color: #4A4949;
     font-family: 'EB Garamond', serif;
     font-style: italic;
     font-size: 16px;
@@ -43,8 +49,6 @@ fieldset {
 }
 
 span {
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
   font-style: normal;
   font-weight: 600;
 }

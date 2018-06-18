@@ -36,7 +36,7 @@ function logo_url() {
 add_filter( 'login_headerurl', __NAMESPACE__ . '\logo_url' );
 
 function logo_url_title() {
-	return '10up.com';
+	return '';
 }
 
 add_filter( 'login_headertitle', __NAMESPACE__ . '\logo_url_title' );
