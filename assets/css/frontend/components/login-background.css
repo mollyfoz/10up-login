@@ -1,5 +1,13 @@
+html {
+	height: 100%;
+}
+
 body {
-	background-image: url('../../assets/images/src/bkgnd-img.jpg');
+	background: linear-gradient(
+                     rgba(6,0,0, .9),
+                     rgba(6,0,0, .9)),
+										 url('../../assets/images/src/bkgnd-img.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
