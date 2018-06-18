@@ -7,6 +7,12 @@ function init() {
 
 add_action( 'login_form', __NAMESPACE__ . '\init');
 
+function forgot_pw_init() {
+	echo do_shortcode('[lost_pw_form]');
+}
+
+add_action( 'lostpassword_form' , __NAMESPACE__ . '\forgot_pw_init');
+
 //override default wordpress styles for login page and enqueue new stylesheet
 function override_styles() {
 
@@ -81,3 +87,31 @@ function custom_login_form() {
 	return $output;
 }
 add_shortcode('login_form', __NAMESPACE__ . '\custom_login_form');
+
+//lost password form field
+function lost_pw_form_fields() {
+
+	ob_start(); ?>
+		<form id="lost_pw_form" class="form" action="">
+			<fieldset>
+				<p>
+					<label for="custom_lost_password">Enter your <span>Username</span></label>
+					<input name="custom_lost_password" id="custom_lost_password" class="required" type="text" aria-required="true" aria-label="Username"/>
+				</p>
+			</fieldset>
+		</form>
+	<?php
+	return ob_get_clean();
+}
+
+//lost password form
+function custom_lost_pw_form() {
+	if ( !is_user_logged_in() ) {
+		$lost_output = lost_pw_form_fields();
+	} else {
+		//do nothing
+	}
+	return $lost_output;
+}
+
+add_shortcode('lost_pw_form', __NAMESPACE__ . '\custom_lost_pw_form');

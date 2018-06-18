@@ -4,6 +4,8 @@
 
 #custom_user_login,
 #custom_user_pass,
+#custom_lost_password,
+.message,
 span {
   border: none;
   color: #4A4949;
@@ -52,12 +54,14 @@ fieldset {
   }
 }
 
-#loginform {
+#loginform,
+#lostpasswordform {
   & > p {
     display: none;
   }
 }
 
+.message,
 span {
   font-style: normal;
   font-weight: 600;
