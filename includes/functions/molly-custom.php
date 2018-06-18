@@ -63,7 +63,7 @@ function login_form_fields() {
 					<input name="custom_user_pass" id="custom_user_pass" class="required" type="password"/>
 				</p>
 				<p>
-					<input id="custom_login_submit" type="submit" value="Login"/>
+					<input id="custom_login_submit" type="submit" value="LOGIN"/>
 				</p>
 			</fieldset>
 		</form>
