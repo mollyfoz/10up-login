@@ -56,11 +56,11 @@ function login_form_fields() {
 			<fieldset>
 				<p>
 					<label for="custom_user_login">Enter your <span>Username</span></label>
-					<input name="custom_user_login" id="custom_user_login" class="required" type="text"/>
+					<input name="custom_user_login" id="custom_user_login" class="required" type="text" aria-required="true" aria-label="Username"/>
 				</p>
 				<p>
 					<label for="custom_user_pass">Enter your <span>Password</span></label>
-					<input name="custom_user_pass" id="custom_user_pass" class="required" type="password"/>
+					<input name="custom_user_pass" id="custom_user_pass" class="required" type="password" aria-required="true" aria-label="Password"/>
 				</p>
 				<p>
 					<input id="custom_login_submit" type="submit" value="LOGIN"/>
