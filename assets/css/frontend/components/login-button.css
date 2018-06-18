@@ -1,4 +1,5 @@
-#custom_login_submit {
+#custom_login_submit,
+#lost_pw_submit {
   background-color: #DB2622;
   border: none;
   color: #FFF;
@@ -10,7 +11,8 @@
   width: 91%;
 }
 
-#custom_login_submit:hover {
+#custom_login_submit:hover,
+#lost_pw_submit:hover {
   background-color: #972629;
   cursor: pointer;
 }

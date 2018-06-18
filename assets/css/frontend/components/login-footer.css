@@ -6,3 +6,8 @@ a {
   font-weight: 400;
   text-decoration: none;
 }
+
+a:hover {
+  color: #70CFCF;
+  text-decoration: underline;
+}

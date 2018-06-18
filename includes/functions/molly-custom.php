@@ -98,6 +98,9 @@ function lost_pw_form_fields() {
 					<label for="custom_lost_password">Enter your <span>Username</span></label>
 					<input name="custom_lost_password" id="custom_lost_password" class="required" type="text" aria-required="true" aria-label="Username"/>
 				</p>
+				<p>
+					<input id="lost_pw_submit" type="submit" value="SUBMIT"/>
+				</p>
 			</fieldset>
 		</form>
 	<?php
