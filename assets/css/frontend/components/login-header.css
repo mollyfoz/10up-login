@@ -1,8 +1,14 @@
-#login {
-	background-color: red;
+html {
+	height: 100%;
+}
 
-	& h1,
-	& h2 {
-		color: pink;
-	}
+body {
+	background: linear-gradient(
+                     rgba(6,0,0, .9),
+                     rgba(6,0,0, .9)),
+										 url('../../assets/images/src/bkgnd-img.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
