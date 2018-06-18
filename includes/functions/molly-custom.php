@@ -81,28 +81,3 @@ function custom_login_form() {
 	return $output;
 }
 add_shortcode('login_form', __NAMESPACE__ . '\custom_login_form');
-
-
-
-// function login_custom_markup() {
-// 	$args = array(
-// 		'echo'           => true,
-// 		'remember'       => true,
-// 		'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
-// 		'form_id'        => 'loginform',
-// 		'id_username'    => 'user_login',
-// 		'id_password'    => '10up_user_pass',
-// 		'id_remember'    => 'rememberme',
-// 		'id_submit'      => 'wp-submit',
-// 		'label_username' => __( 'Address' ),
-// 		'label_password' => __( 'Password' ),
-// 		'label_remember' => __( 'Remember Me' ),
-// 		'label_log_in'   => __( 'Log In' ),
-// 		'value_username' => '',
-// 		'value_remember' => false
-// 	);
-//
-// 	wp_login_form( $args );
-// }
-//
-// add_filter('login_form', __NAMESPACE__ . '\login_custom_markup');

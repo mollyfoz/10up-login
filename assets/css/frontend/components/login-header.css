@@ -1,0 +1,14 @@
+a {
+	display: none;
+}
+
+h1 {
+	align-self: center;
+	background-image: url('../../assets/images/src/10up_logo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+}
