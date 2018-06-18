@@ -3,12 +3,22 @@
   display: flex;
   flex-direction: column;
   padding: 40px;
+  width: 25%;
+}
+
+label {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 #user_login,
 #user_pass {
   border: none;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  font-weight: 400;
   height: 50px;
   margin-top: 10px;
   width: 90%;
