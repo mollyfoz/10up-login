@@ -1,18 +1,18 @@
 #custom_login_submit,
 #lost_pw_submit {
-  background-color: #DB2622;
-  border: none;
-  color: #FFF;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  height: 50px;
-  margin-top: 20px;
-  width: 91%;
+	background-color: #DB2622;
+	border: none;
+	color: #FFF;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	height: 50px;
+	margin-top: 20px;
+	width: 91%;
 }
 
 #custom_login_submit:hover,
 #lost_pw_submit:hover {
-  background-color: #972629;
-  cursor: pointer;
+	background-color: #972629;
+	cursor: pointer;
 }
