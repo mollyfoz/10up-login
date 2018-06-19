@@ -55,7 +55,7 @@ fieldset {
 
 	& .error {
 		box-sizing: border-box;
-		border: 1px solid red;
+		border: 1px solid #DB2622;
 	}
 }
 

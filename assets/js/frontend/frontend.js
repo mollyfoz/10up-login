@@ -1,10 +1,12 @@
 // import foo from './components/bar';
 
-import { enableInputFields, highlightEmpty } from './components/form';
+import { formatInputFieldsMain, highlightEmptyMain, formatEmailField, highlightEmptyLost } from './components/form';
 
 const init = () => {
-	enableInputFields();
-	highlightEmpty();
+	formatInputFieldsMain();
+	highlightEmptyMain();
+	formatEmailField();
+	highlightEmptyLost();
 };
 
 init();

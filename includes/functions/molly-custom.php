@@ -122,11 +122,11 @@ function lost_pw_form_fields() {
 		<form id="lost_pw_form" class="form" action="">
 			<fieldset>
 				<p>
-					<label for="custom_lost_password">Enter your <span>Username</span></label>
-					<input name="custom_lost_password" id="custom_lost_password" class="required" type="text" aria-required="true" aria-label="Username"/>
+					<label for="custom_lost_password">Enter your <span>Email</span></label>
+					<input name="custom_lost_password" id="custom_lost_password" class="required" type="email" aria-required="true" aria-label="Email"/>
 				</p>
 				<p>
-					<input id="lost_pw_submit" type="submit" value="SUBMIT" disabled/>
+					<input id="lost_pw_submit" type="submit" value="SUBMIT"/>
 				</p>
 			</fieldset>
 		</form>
