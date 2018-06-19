@@ -32,9 +32,9 @@ The `form.js` file checks to see if the form fields are completed before submitt
 
 #### Screenshots
 
-![Login Form]()
-![Red Border on Input]()
-![Button Hover]()
-![Lost Password Form]()
+![Login Form](https://github.com/mollyfoz/10up-login/blob/master/assets/images/screen-shots/login-form.png)
+![Red Border on Input](https://github.com/mollyfoz/10up-login/blob/master/assets/images/screen-shots/red-border.png)
+![Button Hover](https://github.com/mollyfoz/10up-login/blob/master/assets/images/screen-shots/button-hover.png)
+![Lost Password Form](https://github.com/mollyfoz/10up-login/blob/master/assets/images/screen-shots/lost-password-form.png)
 
 Molly Magnifico, June 2018
