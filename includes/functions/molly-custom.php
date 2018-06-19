@@ -27,6 +27,18 @@ function override_styles() {
 
 add_action( 'login_enqueue_scripts', __NAMESPACE__ . '\override_styles', 20 );
 
+function scripts() {
+	wp_enqueue_script(
+		'10up_login_frontend',
+		TENUP_LOGIN_URL . 'dist/js/frontend.min.js',
+		[],
+		TENUP_LOGIN_VERSION,
+		true
+	);
+}
+
+add_action( 'login_enqueue_scripts', __NAMESPACE__ . '\scripts' );
+
 //add custom fonts to login form
 function custom_add_google_fonts() {
 	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=EB+Garamond:400i|Raleway:400,600', false );
@@ -49,7 +61,22 @@ add_filter( 'login_headertitle', __NAMESPACE__ . '\logo_url_title' );
 
 //edit login error message
 function login_error_override() {
-		return 'Incorrect email or password.';
+	global $errors;
+	$err_codes = $errors->get_error_codes();
+
+	// Invalid username.
+	// Default: '<strong>ERROR</strong>: Invalid username. <a href="%s">Lost your password</a>?'
+	if ( in_array( 'invalid_username', $err_codes ) ) {
+		$error = '<strong>ERROR</strong>: Invalid username.';
+	}
+
+	// Incorrect password.
+	// Default: '<strong>ERROR</strong>: The password you entered for the username <strong>%1$s</strong> is incorrect. <a href="%2$s">Lost your password</a>?'
+	if ( in_array( 'incorrect_password', $err_codes ) ) {
+		$error = '<strong>ERROR</strong>: The password you entered is incorrect.';
+	}
+
+	return $error;
 }
 
 add_filter('login_errors', __NAMESPACE__ . '\login_error_override');
@@ -99,7 +126,7 @@ function lost_pw_form_fields() {
 					<input name="custom_lost_password" id="custom_lost_password" class="required" type="text" aria-required="true" aria-label="Username"/>
 				</p>
 				<p>
-					<input id="lost_pw_submit" type="submit" value="SUBMIT"/>
+					<input id="lost_pw_submit" type="submit" value="SUBMIT" disabled/>
 				</p>
 			</fieldset>
 		</form>

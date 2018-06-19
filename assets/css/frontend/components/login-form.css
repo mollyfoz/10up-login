@@ -52,6 +52,11 @@ fieldset {
     font-size: 16px;
     font-weight: 400;
   }
+
+	& .error {
+		box-sizing: border-box;
+		border: 1px solid red;
+	}
 }
 
 #loginform,
